@@ -1,0 +1,23 @@
+tr:
+  home: "Ana Sayfa"
+  guides: "Kullanım Rehberi"
+  read_more: "Devamını Oku &rarr;"
+  recent_posts: "Son Gelişmeler"
+  page: "Sayfa"
+  of: "/"
+  newer_posts: "&laquo; Yeni Yazılar"
+  older_posts: "Eski Yazılar &raquo;"
+  language_label: "EN"
+  language_toggle_url: "/en/"
+
+en:
+  home: "Home"
+  guides: "Guides"
+  read_more: "Read More &rarr;"
+  recent_posts: "Latest Updates"
+  page: "Page"
+  of: "of"
+  newer_posts: "&laquo; Newer Posts"
+  older_posts: "Older Posts &raquo;"
+  language_label: "TR"
+  language_toggle_url: "/"

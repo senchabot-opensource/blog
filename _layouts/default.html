@@ -5,7 +5,9 @@
 <nav>
   <a href="{% if lang == 'en' %}/en/{% else %}/{% endif %}">{{ t.home }}</a>
   <a href="{% if lang == 'en' %}/en/guides/{% else %}/guides/{% endif %}">{{ t.guides }}</a>
+  <a href="{{ t.language_toggle_url }}">{{ t.language_label }}</a>
 </nav>
 
 <!-- İçerik buraya gelecek -->
 {{ content }}
+
