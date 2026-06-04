@@ -1,0 +1,59 @@
+title: "Senchabot Blog"
+tagline: "Haberler, Güncellemeler ve Kullanım Rehberleri"
+description: "Senchabot hakkında en son güncellemeler, yayıncılar için ipuçları ve detaylı kullanım rehberleri."
+url: "https://blog.senchabot.com"
+baseurl: ""
+
+# -------------------------------------------
+# Author Information
+# -------------------------------------------
+author:
+  name: "M. Rasit Durmus"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Yazılımcı ve Senchabot'un geliştiricisi."
+  links:
+    linkedin: "https://linkedin.com/in/mrdurmus"
+    github: "https://github.com/rasitds"
+    twitter: "https://x.com/rasitds"
+    instagram: "https://instagram.com/rasit.builds"
+
+# -------------------------------------------
+# Blog & Build Settings
+# -------------------------------------------
+permalink: /posts/:title/
+markdown: kramdown
+highlighter: rouge
+paginate: 10
+paginate_path: "/page:num/"
+
+collections:
+  guides:
+    output: true
+    permalink: /guides/:title/
+
+# -------------------------------------------
+# Navigation Links
+# -------------------------------------------
+nav_links:
+  - title: "Tüm Yazılar"
+    url: "/"
+  - title: "Kullanım Rehberi"
+    url: "/guides/"
+  - title: "Senchabot.com'a Git"
+    url: "https://senchabot.com"
+
+# -------------------------------------------
+# Plugins & Exclusions
+# -------------------------------------------
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
