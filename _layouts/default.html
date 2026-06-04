@@ -1,0 +1,11 @@
+<!-- Dil değişkenini alıyoruz (varsayılan: tr) -->
+{% assign lang = page.lang | default: "tr" %}
+{% assign t = site.data.i18n[lang] %}
+
+<nav>
+  <a href="{% if lang == 'en' %}/en/{% else %}/{% endif %}">{{ t.home }}</a>
+  <a href="{% if lang == 'en' %}/en/guides/{% else %}/guides/{% endif %}">{{ t.guides }}</a>
+</nav>
+
+<!-- İçerik buraya gelecek -->
+{{ content }}
