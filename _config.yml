@@ -18,29 +18,49 @@ author:
     instagram: "https://instagram.com/rasit.builds"
 
 # -------------------------------------------
-# Blog & Build Settings
+# Build Settings
 # -------------------------------------------
-permalink: /posts/:title/
 markdown: kramdown
 highlighter: rouge
-paginate: 10
-paginate_path: "/page:num/"
 
+# -------------------------------------------
+# Collections (Custom Content Types)
+# -------------------------------------------
 collections:
   guides:
     output: true
-    permalink: /guides/:title/
 
 # -------------------------------------------
-# Navigation Links
+# Defaults (Multi-Language Routing & Permalinks)
 # -------------------------------------------
-nav_links:
-  - title: "Tüm Yazılar"
-    url: "/"
-  - title: "Kullanım Rehberi"
-    url: "/guides/"
-  - title: "Senchabot.com'a Git"
-    url: "https://senchabot.com"
+defaults:
+  # --- REHBERLER (_guides) ---
+  - scope:
+      path: "_guides/en"
+      type: "guides"
+    values:
+      lang: "en"
+      permalink: /en/guides/:title/
+  - scope:
+      path: "_guides/tr"
+      type: "guides"
+    values:
+      lang: "tr"
+      permalink: /guides/:title/
+
+  # --- BLOG YAZILARI (_posts) ---
+  - scope:
+      path: "_posts/en"
+      type: "posts"
+    values:
+      lang: "en"
+      permalink: /en/posts/:title/
+  - scope:
+      path: "_posts/tr"
+      type: "posts"
+    values:
+      lang: "tr"
+      permalink: /posts/:title/
 
 # -------------------------------------------
 # Plugins & Exclusions
@@ -49,7 +69,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-paginate
+  # jekyll-paginate
 
 exclude:
   - Gemfile
